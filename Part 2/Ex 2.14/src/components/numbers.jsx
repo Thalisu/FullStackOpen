@@ -6,11 +6,10 @@ export const Numbers = ({ persons, setPersons, newFilter, remove }) => {
       phonebook.name.match(RegExp(newFilter, "i"))
     );
   const handleClick = (id) => {
-    let confirm = window.confirm;
-    confirm
-      ? (remove(id),
-        setPersons(phonebook.filter((persons) => persons.id !== id)))
-      : "";
+    if (window.confirm("Do you really want to remove this person?")) {
+      remove(id);
+      setPersons(phonebook.filter((persons) => persons.id !== id));
+    }
   };
   return phonebook.map((persons) => {
     return (
