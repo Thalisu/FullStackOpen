@@ -1,0 +1,6 @@
+.message {
+  background-color: rgba(128, 123, 123, 0.3);
+  padding: 10px 15px;
+  border: 2px solid green;
+  box-sizing: border-box;
+}
