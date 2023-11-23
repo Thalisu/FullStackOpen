@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -23,7 +24,7 @@ app.use(
   })
 );
 app.use(cors());
-app.use(express.static("dist"));
+app.use(express.static("build"));
 
 app.get("/", (request, response) => {
   response.send("<h1>Hello World!</h1>");
