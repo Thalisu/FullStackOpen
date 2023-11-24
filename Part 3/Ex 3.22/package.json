@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "lint": "eslint ."
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,6 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "eslint": "^8.54.0"
+    "nodemon": "^3.0.1"
   }
 }
