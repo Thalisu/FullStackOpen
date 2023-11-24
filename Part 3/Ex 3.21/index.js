@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 require("dotenv").config();
 const Person = require("./models/person");
 
@@ -23,7 +24,7 @@ app.use(
     ].join(" ");
   })
 );
-
+app.use(cors());
 app.get("/", (request, response) => {
   response.send("<h1>Hello World!</h1>");
 });
