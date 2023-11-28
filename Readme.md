@@ -16,4 +16,4 @@
 
 # Part 4
 
-<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">BackEnd Folder structure. unit tests with JEST. Async functions and error management with try-catch and with express-async-errors. Promises </p>
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">BackEnd Folder structure. unit tests with JEST. Async functions and error management with try-catch and with express-async-errors. a little of promises. User administration, adding users to database, password encrypt to hash with bcryptjs. Auth users with digital signed tokens</p>
