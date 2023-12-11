@@ -28,8 +28,7 @@ const reducer = (state = initialState, action) => {
         ...toChange,
         votes: toChange.votes + 1,
       };
-      const updated = state.map((anec) => (anec.id !== id ? anec : changed));
-      return updated;
+      return state.map((anec) => (anec.id !== id ? anec : changed));
     }
     case "NEW_ANEC": {
       const newAnec = {
@@ -44,4 +43,12 @@ const reducer = (state = initialState, action) => {
   }
 };
 
+const addVote = (id) => ({ type: "INCREASE", payload: { id } });
+
+const addAnec = (event) => {
+  event.preventDefault();
+  const content = event.target.anecInput.value;
+  return { type: "NEW_ANEC", payload: { content } };
+};
+export { addVote, addAnec };
 export default reducer;
