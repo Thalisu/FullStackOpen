@@ -21,3 +21,7 @@
 # Part 5
 
 <p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">How to make a login with tokens, interaction of back and front to show if the user is logged or not and show functionalities that should appear only to logged users. props.children and propTypes. unit testing react with react testing library, userEvent testing library, Cypress and E2E tests</p>
+
+# Part 6
+
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">About flux architeture, Redux store & tolkit, Backend with redux</p>
