@@ -18,7 +18,11 @@ const NewAnecdoteForm = () => {
     event.preventDefault();
     const content = event.target.Anecdote.value;
     event.target.Anecdote.value = "";
-    if (content.length > 4) newAnecdote.mutate({ content, votes: 0 });
+    if (content.length < 5) {
+      dispatch("too short anecdote, must have length 5 or more", 5);
+      return;
+    }
+    newAnecdote.mutate({ content, votes: 0 });
   };
 
   return (

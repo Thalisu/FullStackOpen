@@ -3,6 +3,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateAnecdote } from "../requests";
 import { useNotificationDispatch } from "../NotificationContext";
 const AnecdoteList = ({ anecdotes }) => {
+  console.log(anecdotes);
   const style = {
     margin: "0 0 10px 0",
   };
