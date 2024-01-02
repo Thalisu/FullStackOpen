@@ -24,4 +24,6 @@
 
 # Part 6
 
-<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">About flux architeture, Redux store & tolkit, Backend with redux</p>
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">About flux architeture, Redux store & tolkit, Backend with redux, react Query, useReducer</p>
+
+# Part 7
