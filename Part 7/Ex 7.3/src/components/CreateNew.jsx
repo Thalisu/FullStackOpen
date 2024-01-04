@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addAnecdote } from "../reducers/anecdotes/slice";
+import { setNotification } from "../reducers/notification";
 
 const CreateNew = () => {
   const navigate = useNavigate();
@@ -11,11 +12,19 @@ const CreateNew = () => {
     author: "",
     info: "",
   });
-  
+
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addAnecdote(formData));
+    dispatch(
+      setNotification(`anecdote "${formData.content}" successfully added`, 2)
+    );
     navigate("/");
+    setFormData({
+      content: "",
+      author: "",
+      info: "",
+    });
   };
 
   return (
