@@ -1,87 +1,41 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-
-const useField = (type) => {
-  const [value, setValue] = useState("");
-
-  const onChange = (event) => {
-    setValue(event.target.value);
-  };
-
-  return {
-    type,
-    value,
-    onChange,
-  };
-};
-
-const useResource = (baseUrl) => {
-  const [resources, setResources] = useState([]);
-  useEffect(() => {
-    axios.get(baseUrl).then((response) => {
-      setResources(response.data);
-    });
-  }, [baseUrl]);
-
-  const create = async (newObject) => {
-    const { data } = await axios.post(baseUrl, newObject);
-    setResources(resources.concat(data));
-    return data;
-  };
-
-  /*   const update = async (id, newObject) => {
-    const response = await axios.put(`${baseUrl}/${id}`, newObject);
-    return response.data;
-  }; */
-
-  const service = {
-    create,
-  };
-
-  return [resources, service];
-};
+import { Routes, Route, Link } from "react-router-dom";
+import {
+  AnecdoteList,
+  Anecdote,
+  CreateNew,
+  About,
+  Footer,
+  Notification,
+} from "./components";
 
 const App = () => {
-  const content = useField("text");
-  const name = useField("text");
-  const number = useField("text");
-
-  const [notes, noteService] = useResource("http://localhost:3005/notes");
-  const [persons, personService] = useResource("http://localhost:3005/persons");
-
-  const handleNoteSubmit = (event) => {
-    event.preventDefault();
-    noteService.create({ content: content.value });
+  const padding = {
+    paddingRight: 5,
   };
-
-  const handlePersonSubmit = (event) => {
-    event.preventDefault();
-    personService.create({ name: name.value, number: number.value });
-  };
-
   return (
-    <div>
-      <h2>notes</h2>
-      <form onSubmit={handleNoteSubmit}>
-        <input {...content} />
-        <button>create</button>
-      </form>
-      {notes.map((n) => (
-        <p key={n.id}>{n.content}</p>
-      ))}
-
-      <h2>persons</h2>
-      <form onSubmit={handlePersonSubmit}>
-        name <input {...name} /> <br />
-        number <input {...number} />
-        <button>create</button>
-      </form>
-      {persons.map((n) => (
-        <p key={n.id}>
-          {n.name} {n.number}
-        </p>
-      ))}
-    </div>
+    <>
+      <h1>Software anecdotes</h1>
+      <div>
+        <Link to="/" style={padding}>
+          anecdotes
+        </Link>
+        <Link to="/create" style={padding}>
+          create new
+        </Link>
+        <Link to="/about" style={padding}>
+          about
+        </Link>
+        <Notification />
+      </div>
+      <div></div>
+      <Routes>
+        <Route path="/" element={<AnecdoteList />} />
+        <Route path="/anecdotes/:id" element={<Anecdote />} />
+        <Route path="/create" element={<CreateNew />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer />
+    </>
   );
 };
 
