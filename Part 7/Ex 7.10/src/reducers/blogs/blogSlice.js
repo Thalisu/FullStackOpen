@@ -9,8 +9,17 @@ const blogSlice = createSlice({
     fetchBlogData(state, action) {
       return action.payload;
     },
+    like(state, action) {
+      const id = action.payload;
+      const toChange = state.find((a) => a.id === id);
+      const changed = {
+        ...toChange,
+        likes: toChange.likes + 1,
+      };
+      return state.map((blog) => (blog.id !== id ? blog : changed));
+    },
   },
 });
 
-export const { fetchBlogData } = blogSlice.actions;
+export const { fetchBlogData, like } = blogSlice.actions;
 export default blogSlice.reducer;

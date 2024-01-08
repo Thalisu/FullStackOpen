@@ -9,9 +9,7 @@ const Toggle = (props) => {
   };
 
   return isHidden ? (
-    <button onClick={toggleVisibility} id={props.id}>
-      show
-    </button>
+    <button onClick={toggleVisibility}>show</button>
   ) : (
     <>
       <button onClick={toggleVisibility}>hide</button>

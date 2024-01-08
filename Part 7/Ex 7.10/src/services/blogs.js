@@ -30,8 +30,9 @@ const deleteBlog = async (id, user) => {
   return response.data;
 };
 
-const like = async (newObject, id) => {
-  const response = await axios.put(`${baseUrl}/${id}`, newObject);
+const like = async (blog) => {
+  const { id, ...updatedBlog } = blog;
+  const response = await axios.put(`${baseUrl}/${id}`, updatedBlog);
   return response.data;
 };
 
