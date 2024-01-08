@@ -1,5 +1,5 @@
 import { fetchBlogData } from "./blogSlice";
-import blogService from "../../src/services/blogs";
+import blogService from "../../services/blogs";
 
 export const fetchBlog = () => {
   return async (dispatch) => {
