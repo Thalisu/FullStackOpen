@@ -18,9 +18,12 @@ const blogSlice = createSlice({
       };
       return state.map((blog) => (blog.id !== id ? blog : changed));
     },
-
+    pushBlog(state, action) {
+      const content = action.payload;
+      state.push(content);
+    },
   },
 });
 
-export const { fetch, like } = blogSlice.actions;
+export const { fetch, like, pushBlog } = blogSlice.actions;
 export default blogSlice.reducer;

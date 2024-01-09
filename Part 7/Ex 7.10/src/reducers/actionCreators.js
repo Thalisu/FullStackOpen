@@ -1,8 +1,16 @@
 import blogService from "../services/blogs";
 import loginService from "../services/login";
-import { fetch, like } from "./blogs";
+import { fetch, like, pushBlog } from "./blogs";
 import { notification } from "./notification";
 import { login } from "./loggedUser";
+
+export const postBlog = (content) => {
+  return async (dispatch) => {
+    const newBlog = await blogService.create(content);
+    
+    dispatch(pushBlog(newBlog));
+  };
+};
 
 export const fetchBlogData = () => {
   return async (dispatch) => {
@@ -25,6 +33,21 @@ export const setUser = (username, password) => {
       console.log(err);
       dispatch(setNotification(`Wrong credentials`, 2));
     }
+  };
+};
+
+export const fetchUser = (user) => {
+  return async (dispatch) => {
+    blogService.setToken(user.token);
+    dispatch(login(user.username));
+  };
+};
+
+export const logout = () => {
+  return async (dispatch) => {
+    window.localStorage.removeItem("loggedBlogAppUser");
+    blogService.setToken("");
+    dispatch(login(""));
   };
 };
 

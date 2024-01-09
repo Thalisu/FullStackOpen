@@ -18,7 +18,7 @@ const Login = () => {
   return (
     <div>
       <h2>login</h2>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={(event) => onSubmit(event)}>
         <div>
           username: <input {...username} />
         </div>

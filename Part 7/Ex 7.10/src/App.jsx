@@ -1,9 +1,9 @@
-import { Blogs, Notification } from "./components";
+import { Blogs, Notification, Login, PostBlog } from "./components";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Link, Route, Routes } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchBlogData } from "./reducers/actionCreators";
-import Login from "./components/LoginForm";
+import { fetchBlogData, fetchUser, logout } from "./reducers/actionCreators";
+import { useEffect } from "react";
 
 const App = () => {
   const user = useSelector((state) => state.loggedUser);
@@ -11,6 +11,15 @@ const App = () => {
   const padding = {
     padding: 5,
   };
+
+  useEffect(() => {
+    const loggedUserJSON = window.localStorage.getItem("loggedBlogAppUser");
+    if (loggedUserJSON) {
+      const user = JSON.parse(loggedUserJSON);
+      dispatch(fetchUser(user));
+    }
+  }, [dispatch]);
+
   return (
     <div>
       <Router>
@@ -19,7 +28,19 @@ const App = () => {
             Home
           </Link>
           {user ? (
-            <em style={padding}>{user} logged in</em>
+            <>
+              <Link style={padding} to="/post">
+                Add a blog
+              </Link>
+              <em style={padding}>{user} logged in</em>
+              <button
+                onClick={() => {
+                  dispatch(logout());
+                }}
+              >
+                logout
+              </button>
+            </>
           ) : (
             <Link style={padding} to="/login">
               login
@@ -34,6 +55,7 @@ const App = () => {
             element={<Blogs />}
             loader={dispatch(fetchBlogData())}
           />
+          <Route path="/post" element={<PostBlog />} />
         </Routes>
       </Router>
     </div>
