@@ -1,14 +1,23 @@
 import blogService from "../services/blogs";
 import loginService from "../services/login";
-import { fetch, like, pushBlog } from "./blogs";
+import { fetch, like, pushBlog, filterBlog } from "./blogs";
 import { notification } from "./notification";
 import { login } from "./loggedUser";
 
-export const postBlog = (content) => {
+export const deleteBlog = (id) => {
+  return async (dispatch) => {
+    await blogService.deleteBlog(id);
+    dispatch(filterBlog(id));
+    dispatch(setNotification(`successfully deleted`, 2));
+  };
+};
+
+export const postBlog = (content, user) => {
   return async (dispatch) => {
     const newBlog = await blogService.create(content);
-    
-    dispatch(pushBlog(newBlog));
+    const postedBlog = { ...newBlog, user: { username: user } };
+    dispatch(pushBlog(postedBlog));
+    dispatch(setNotification(`successfully added "${postedBlog.title}"`, 2));
   };
 };
 

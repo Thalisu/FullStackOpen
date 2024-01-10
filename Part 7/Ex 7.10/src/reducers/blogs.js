@@ -22,8 +22,12 @@ const blogSlice = createSlice({
       const content = action.payload;
       state.push(content);
     },
+    filterBlog(state, action) {
+      const id = action.payload;
+      return state.filter((state) => state.id !== id);
+    },
   },
 });
 
-export const { fetch, like, pushBlog } = blogSlice.actions;
+export const { fetch, like, pushBlog, filterBlog } = blogSlice.actions;
 export default blogSlice.reducer;

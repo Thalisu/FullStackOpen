@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useField } from "../hooks";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { postBlog } from "../reducers/actionCreators";
 
 const NewBlogForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.loggedUser);
   const title = useField("text");
   const author = useField("text");
   const url = useField("text");
@@ -18,7 +19,7 @@ const NewBlogForm = () => {
       url: url.value,
       likes: 0,
     };
-    dispatch(postBlog(newBlog));
+    dispatch(postBlog(newBlog, user));
     navigate("/");
   };
 
