@@ -28,6 +28,6 @@
 
 # Part 7
 
-<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">React router dom. How to do custom hooks for better code, Ui Frameworks. Styled components</p>
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">React router dom. How to do custom hooks for better code. Ui Frameworks. Styled components</p>
 
 # Part 8
