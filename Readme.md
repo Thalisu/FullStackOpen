@@ -27,3 +27,7 @@
 <p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">About flux architeture, Redux store & tolkit, Backend with redux, react Query, useReducer</p>
 
 # Part 7
+
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">React router dom. How to do custom hooks for better code, Ui Frameworks. Styled components</p>
+
+# Part 8
