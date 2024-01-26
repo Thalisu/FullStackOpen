@@ -1,0 +1,22 @@
+{
+  "name": "ex-8.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "dotenv": "^16.4.1",
+    "graphql": "^16.8.1",
+    "mongoose": "^7.6.3",
+    "mongoose-unique-validator": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
