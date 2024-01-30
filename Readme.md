@@ -31,3 +31,5 @@
 <p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">React router dom. How to do custom hooks for better code. Ui Frameworks. Styled components</p>
 
 # Part 8
+
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">GraphQL-server, Apollo Client, database and user administration and login with graphQL, updating cache, fragments and subscriptions using websocket & how to solve n+1 Problem</p>
