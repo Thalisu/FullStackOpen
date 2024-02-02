@@ -33,3 +33,7 @@
 # Part 8
 
 <p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">GraphQL-server, Apollo Client, database and user administration and login with graphQL, updating cache, fragments and subscriptions using websocket & how to solve n+1 Problem</p>
+
+# Part 9
+
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">Typescript overview</p>
