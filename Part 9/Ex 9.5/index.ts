@@ -1,20 +1,12 @@
-import express, { Request } from "express";
-import qs from "querystring";
+import express from "express";
 import calculateBmi from "./bmiCalculator";
 
-interface CustomRequest extends Request {
-  parsedQuery: qs.ParsedUrlQuery;
-}
-
 const app = express();
-app.use((req: CustomRequest, _res, next) => {
-  req.parsedQuery = qs.parse(req.url?.split("?")[1] || "");
-  next();
-});
+app.use(express.json());
 
-app.get("/bmi", (req: CustomRequest, res) => {
-  const height = parseInt(req.parsedQuery.height as string);
-  const weight = parseInt(req.parsedQuery.weight as string);
+app.get("/bmi", (req, res) => {
+  const height = parseInt(req.query.height as string);
+  const weight = parseInt(req.query.weight as string);
 
   if (isNaN(height) || isNaN(weight)) {
     res.status(400).json({ error: "malformatted parameters" });
