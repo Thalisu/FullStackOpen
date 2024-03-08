@@ -4,6 +4,8 @@ import Constants from "expo-constants";
 import Text from "./Text";
 
 import theme from "../theme";
+import { useQuery } from "@apollo/client";
+import { CURRENT_USER } from "../graphql/queries";
 
 const styles = StyleSheet.create({
   container: {
@@ -21,13 +23,21 @@ const styles = StyleSheet.create({
   },
 });
 
+const SignIn = () => {}
+
 const AppBar = () => {
+  const { loading, data } = useQuery(CURRENT_USER, {
+    fetchPolicy: "cache-and-network",
+  });
+
+  const signInText = loading ? "Sign in" : data.me ? "Sign Out" : "Sign in";
+
   return (
     <View style={styles.container}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <Link to="/signIn" style={styles.button}>
           <Text fontWeight="bold" fontSize="subheading">
-            Sign In
+            {signInText}
           </Text>
         </Link>
         <Link to="/" style={styles.button}>

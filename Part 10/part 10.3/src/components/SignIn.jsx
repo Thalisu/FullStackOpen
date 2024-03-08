@@ -1,5 +1,9 @@
 import { View, TextInput, Pressable, StyleSheet } from "react-native";
+
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-native";
+import useSignIn from "../hooks/useSignIn";
+
 import * as yup from "yup";
 
 import Text from "./Text";
@@ -33,8 +37,8 @@ const initialValues = {
 };
 
 const validationSchema = yup.object().shape({
-  user: yup.string().length(4, "username length must be greater or equal to 4"),
-  pass: yup.string().length(4, "password length must be greater or equal to 4"),
+  user: yup.string().min(4, "username length must be greater or equal to 4"),
+  pass: yup.string().min(4, "password length must be greater or equal to 4"),
 });
 
 const SignInForm = ({ onSubmit }) => {
@@ -75,12 +79,17 @@ const SignInForm = ({ onSubmit }) => {
 };
 
 const SignIn = () => {
-  const onSubmit = (values) => {
-    const user = values.user;
-    const password = values.pass;
+  const navigate = useNavigate();
+  const [handleSingIn] = useSignIn();
 
-    if (user && password) {
-      console.log(`user: ${user} password: ${password}`);
+  const onSubmit = async (values) => {
+    const { user, pass } = values;
+
+    try {
+      await handleSingIn(user, pass);
+      navigate("/");
+    } catch (e) {
+      console.log(e);
     }
   };
 
