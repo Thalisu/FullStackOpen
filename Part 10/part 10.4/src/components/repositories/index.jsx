@@ -4,6 +4,7 @@ import useRepositories from "../../hooks/useRepositories";
 
 import RepositoryItem from "./RepositoryItem";
 import theme from "../../theme";
+import { Link } from "react-router-native";
 
 const styles = StyleSheet.create({
   separator: {
@@ -28,8 +29,11 @@ const RepositoryList = () => {
       <FlatList
         data={repositories}
         ItemSeparatorComponent={ItemSeparator}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <RepositoryItem item={item} />}
+        renderItem={({ item }) => (
+          <Link to={`/repository/${item.id}`}>
+            <RepositoryItem item={item} />
+          </Link>
+        )}
       />
     </View>
   );
