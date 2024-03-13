@@ -30,11 +30,18 @@ const SignInOut = () => {
   };
 
   return loading ? (
-    <Link to="/signIn" style={styles.button}>
-      <Text fontWeight="bold" fontSize="subheading">
-        Sign In
-      </Text>
-    </Link>
+    <>
+      <Link to="/signIn" style={styles.button}>
+        <Text fontWeight="bold" fontSize="subheading">
+          Sign In
+        </Text>
+      </Link>
+      <Link to="/signUp" style={styles.button}>
+        <Text fontWeight="bold" fontSize="subheading">
+          Sign Up
+        </Text>
+      </Link>
+    </>
   ) : data.me ? (
     <Pressable onPress={() => handlePress()} style={styles.button}>
       <Text fontWeight="bold" fontSize="subheading">
@@ -42,11 +49,18 @@ const SignInOut = () => {
       </Text>
     </Pressable>
   ) : (
-    <Link to="/signIn" style={styles.button}>
-      <Text fontWeight="bold" fontSize="subheading">
-        Sign In
-      </Text>
-    </Link>
+    <>
+      <Link to="/signIn" style={styles.button}>
+        <Text fontWeight="bold" fontSize="subheading">
+          Sign In
+        </Text>
+      </Link>
+      <Link to="/signUp" style={styles.button}>
+        <Text fontWeight="bold" fontSize="subheading">
+          Sign Up
+        </Text>
+      </Link>
+    </>
   );
 };
 
