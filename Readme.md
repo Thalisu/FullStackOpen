@@ -37,3 +37,7 @@
 # Part 9
 
 <p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">Typescript => tsconfig, eslint for ts, type narrowings, type guards, deeper type usages. Express with ts. React with ts</p>
+
+# Part 10
+
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">React Native</p>
