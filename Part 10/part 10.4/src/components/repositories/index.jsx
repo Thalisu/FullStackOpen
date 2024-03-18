@@ -27,10 +27,19 @@ const ItemSeparator = () => <View style={styles.separator} />;
 const RepositoryList = () => {
   const [orderDirection, setOrderDirection] = useState();
   const [search, setSearch] = useState("");
-  const [filter] = useDebounce(search, 500);
-  const { repositories, loading } = useRepositories(orderDirection, filter);
+  const [searchKeyword] = useDebounce(search, 500);
+  const { repositories, loading, fetchMore } = useRepositories({
+    orderBy: "RATING_AVERAGE",
+    orderDirection,
+    searchKeyword,
+    first: 5,
+  });
 
   if (loading) return <Text>Loading...</Text>;
+
+  const onEndReach = () => {
+    fetchMore();
+  };
 
   return (
     <View style={styles.container}>
@@ -50,6 +59,8 @@ const RepositoryList = () => {
             <RepositoryItem item={item} />
           </Link>
         )}
+        onEndReached={onEndReach}
+        onEndReachedThreshold={0.5}
       />
     </View>
   );

@@ -32,7 +32,10 @@ const ItemSeparator = () => <View style={styles.separator} />;
 
 const Repository = () => {
   const { id } = useParams();
-  const { repository, loading } = useRepository(id);
+  const { repository, loading, fetchMore } = useRepository({
+    repositoryId: id,
+    first: 4,
+  });
   if (loading) return <Text>Loading...</Text>;
 
   const handlePress = () => {
@@ -40,6 +43,11 @@ const Repository = () => {
   };
 
   const reviews = repository.reviews.edges.map((r) => r.node);
+
+  const onEndReach = () => {
+    console.log("aiaaa");
+    fetchMore();
+  };
 
   return (
     <>
@@ -55,6 +63,8 @@ const Repository = () => {
         data={reviews}
         ItemSeparatorComponent={ItemSeparator}
         renderItem={({ item }) => <ReviewItem item={item} />}
+        onEndReached={onEndReach}
+        onEndReachedThreshold={0.2}
       />
     </>
   );
