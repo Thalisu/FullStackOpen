@@ -41,3 +41,7 @@
 # Part 10
 
 <p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">React Native</p>
+
+# Part 11
+
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">Part 1: an introduction to what is Ci and CD, why is it important and the types of CI setup</p>
