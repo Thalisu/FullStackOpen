@@ -45,3 +45,12 @@
 # Part 11
 
 <p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">Part 1: an introduction to what is Ci and CD, why is it important and the types of CI setup<br>Part 2-4: how to make a pipeline with lint - tests - build - deploy<br>part 5: periodic health check + pipeline notifications</p>
+
+# Part 12
+
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">to do</p>
+
+# Part 13
+
+<p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">relacional databases<br/>
+part 1: using sequelize</p>
