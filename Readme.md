@@ -54,5 +54,6 @@
 
 <p style="@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');font-family: 'Montserrat', sans-serif;">relacional databases<br/>
 part 1: using sequelize<br/>
-part 2: folder structure, user management -> connection between tables & token validation, queries options
+part 2: folder structure, user management -> one to many relation & token validation, queries options
+part 3: migrations, many to many realations, eager fetch & lazy fetch
 </p>
