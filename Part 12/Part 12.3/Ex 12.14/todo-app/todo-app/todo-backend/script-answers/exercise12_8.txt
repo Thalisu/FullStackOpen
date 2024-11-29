@@ -1,0 +1,30 @@
+Script started on 2024-11-28 19:24:52-03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="220" LINES="17"]
+[0m[49m[39m[27m[24m[K
+
+[2A7[0m[49m[39m[0m[49m[34m~/xdd/FullStackOpen/Part 12/Part 12.2/Ex 12.8/todo-app/todo-backend[0m[34m[49m[34m[0m[34m[49m[30m[0m[30m[49m[39m                                                                                                                                                        [0m[49m[39m
+[0m[49m[35m❯[0m[35m[49m[35m[0m[35m[49m[30m[0m[30m[49m[39m [0m[49m[39m[?2004h[?25l8[0m[49m[39m[27m[24m[J[0m[27m[24m[J[0m[49m[39m
+[A[0m[49m[34m~/xdd/FullStackOpen/Part 12/Part 12.2/Ex 12.8/todo-app/todo-backend[0m[34m[49m[34m[0m[34m[49m[30m[0m[30m[49m[39m                                                                                                                                                        [0m[49m[39m
+[0m[49m[35m❯[0m[35m[49m[35m[0m[35m[49m[30m[0m[30m[49m[39m [0m[49m[39m[K[?1h=[?25h[?2004h[?25l[A[0m[27m[24m[J[0m[49m[39m
+[A[0m[49m[34m~/xdd/FullStackOpen/Part 12/Part 12.2/Ex 12.8/todo-app/todo-backend[0m[34m[49m[34m[0m[34m[49m [0m[34m[49m[38;5;242m[0m[38;5;242m[49m[38;5;242mmain[0m[38;5;242m[49m[38;5;242m[0m[38;5;242m[49m[30m[0m[30m[49m[39m                                                                                                                                                   [0m[49m[39m
+[0m[49m[35m❯[0m[35m[49m[35m[0m[35m[49m[30m[0m[30m[49m[39m [0m[49m[39m[K[?25h[?25l[A[0m[27m[24m[J[0m[49m[39m
+[A[0m[49m[34m~/xdd/FullStackOpen/Part 12/Part 12.2/Ex 12.8/todo-app/todo-backend[0m[34m[49m[34m[0m[34m[49m [0m[34m[49m[38;5;242m[0m[38;5;242m[49m[38;5;242mmain[0m[38;5;242m[49m[38;5;242m*[0m[38;5;242m[49m[38;5;242m[0m[38;5;242m[49m[38;5;242m[0m[38;5;242m[49m[30m[0m[30m[49m[39m                                                                                                                                                  [0m[49m[39m
+[0m[49m[35m❯[0m[35m[49m[35m[0m[35m[49m[30m[0m[30m[49m[39m [0m[49m[39m[K[?25h[1m[31md[0m[39m[1m[31md[0m[39m[90mocker container ls[39m[18D[1m[31md[1m[31mc[0m[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [17D[1m[31md[1m[31mc[1m[31mo[0m[39m[1m[31md[1m[31mc[0m[39m[0m[39m [1m[31md[0m[39m[0m[39m [1m[31md[0m[39m[90mocker container ls[39m[18D[0m[33md[33mo[39m[1m[31md[1m[31mo[1m[31mc[0m[39m[1m[31mc[1m[31mk[0m[39m[1m[31mk[1m[31me[0m[39m[0m[32md[0m[32mo[0m[32mc[0m[32mk[0m[32me[32mr[39m[39m [39me[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11D[90mxec -it af37 bash[39m[17D[39mx[39me[39mc[39m [39m-[39mi[39mt[39m [39ma[39mf[39m3[39m7[39m [39mb[39ma[39ms[39mh[?1l>[?2004l
+[?2004hroot@af37c3a7455d:/# mongosh
+[?2004l]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6748edbd485e3f9d5cc1c18b
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.3[0m
+Using MongoDB:		8.0.3
+[1m[33mUsing Mongosh[0m:		2.3.3
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+[1G[0J [1G[1G[0Jtest> [7Gexit
+[?2004hroot@af37c3a7455d:/# exit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                            [0m[49m[39m[K
+[0m[27m[24m[J[0m[49m[39m
+[A[0m[49m[34m~/xdd/FullStackOpen/Part 12/Part 12.2/Ex 12.8/todo-app/todo-backend[0m[34m[49m[34m[0m[34m[49m [0m[34m[49m[38;5;242m[0m[38;5;242m[49m[38;5;242mmain[0m[38;5;242m[49m[38;5;242m*[0m[38;5;242m[49m[38;5;242m[0m[38;5;242m[49m[38;5;242m[0m[38;5;242m[49m[30m[0m[30m[49m[39m                                                                                                                                               [0m[49m[33m13s[0m[33m[49m[33m[0m[33m[49m[33m[0m[33m[49m[39m
+[0m[49m[35m❯[0m[35m[49m[35m[0m[35m[49m[30m[0m[30m[49m[39m [0m[49m[39m[K[?1h=[?2004h[?25l[A[0m[27m[24m[J[0m[49m[39m
+[A[0m[49m[34m~/xdd/FullStackOpen/Part 12/Part 12.2/Ex 12.8/todo-app/todo-backend[0m[34m[49m[34m[0m[34m[49m [0m[34m[49m[38;5;242m[0m[38;5;242m[49m[38;5;242mmain[0m[38;5;242m[49m[38;5;242m*[0m[38;5;242m[49m[38;5;242m[0m[38;5;242m[49m[38;5;242m[0m[38;5;242m[49m[30m[0m[30m[49m[39m                                                                                                                                               [0m[49m[33m13s[0m[33m[49m[33m[0m[33m[49m[33m[0m[33m[49m[39m
+[0m[49m[35m❯[0m[35m[49m[35m[0m[35m[49m[30m[0m[30m[49m[39m [0m[49m[39m[K[?25h[1m[31me[0m[39m[1m[31me[0m[39m[90mxit[39m[0m[32me[32mx[39m[1m[31me[1m[31mx[1m[31mi[0m[39m[0m[32me[0m[32mx[0m[32mi[32mt[39m[?1l>[?2004l
+
+Script done on 2024-11-28 19:25:12-03:00 [COMMAND_EXIT_CODE="0"]
